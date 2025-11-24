@@ -12,17 +12,38 @@
     <!-- NAV BAR -->
     <nav class="navbar">
         <div class="nav-left">Daniel Martin | BI Consultant</div>
-        <div class="nav-links">
+
+        <!-- Desktop Links -->
+        <div class="nav-links" id="navLinks">
             <a href="#services">Services</a>
             <a href="#tools">Tools</a>
             <a href="#problems">Problems I Solve</a>
             <a href="#portfolio">Portfolio</a>
             <a href="#about">About</a>
         </div>
-        <a href="#assessment" class="nav-cta">Book a Free Assessment</a>
+
+        <!-- CTA on Desktop -->
+        <a href="#assessment" class="nav-cta desktop-only">Book a Free Assessment</a>
+
+        <!-- Hamburger -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </nav>
 
-    <!-- HERO WITH ANIMATION BACKGROUND -->
+    <!-- Mobile Dropdown Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#services">Services</a>
+        <a href="#tools">Tools</a>
+        <a href="#problems">Problems I Solve</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about">About</a>
+        <a href="#assessment" class="nav-cta">Book a Free Assessment</a>
+    </div>
+
+    <!-- HERO -->
     <header class="hero">
         <div id="heroAnimation"></div>
 
@@ -65,7 +86,7 @@
         </ul>
     </section>
 
-    <!-- PROBLEMS I SOLVE -->
+    <!-- PROBLEMS -->
     <section id="problems" class="section">
         <h2>Common Problems I Solve</h2>
         <ul class="list">
@@ -78,7 +99,7 @@
         </ul>
     </section>
 
-    <!-- PORTFOLIO PLACEHOLDERS -->
+    <!-- PORTFOLIO -->
     <section id="portfolio" class="section">
         <h2>Portfolio (Replace With Your Images)</h2>
         <div class="image-grid">
@@ -108,9 +129,17 @@
         <p>© 2025 Daniel Martin — BI Consultant</p>
     </footer>
 
-    <!-- BACKGROUND ANIMATION -->
     <script src="animation.js"></script>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+            hamburger.classList.toggle('active');
+        });
+    </script>
 
 </body>
 </html>
-
