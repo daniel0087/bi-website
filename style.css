@@ -19,7 +19,6 @@ body {
 /* Logo placeholder or actual logo container */
 .tool-logo {
     height: 120px;
-    background: #e3e1ff;     /* Light purple */
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -27,7 +26,7 @@ body {
     font-weight: bold;
     color: #333;
     text-align: center;
-    padding: 10px;
+    padding: 4px;
 }
 
 /* Later, when you replace with real images */
@@ -332,3 +331,4 @@ body {
 	
 	
 }
+
