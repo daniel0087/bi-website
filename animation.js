@@ -15,17 +15,18 @@ window.addEventListener("resize", resize);
 resize();
 
 function createParticles() {
-    const isMobile = window.innerWidth < 768;
-    const count = isMobile ? 25 : 60;  // fewer particles on mobile
+    const mobile = window.innerWidth < 768;
+    const count = mobile ? 20 : 50;
 
     particles = [];
+
     for (let i = 0; i < count; i++) {
         particles.push({
             x: Math.random() * width,
             y: Math.random() * height,
             r: Math.random() * 3 + 1,
-            dx: (Math.random() - 0.5) * 0.7,
-            dy: (Math.random() - 0.5) * 0.7,
+            dx: (Math.random() - 0.5) * 0.5,
+            dy: (Math.random() - 0.5) * 0.5,
             color: Math.random() > 0.5 ? "#6f27ff" : "#437bff"
         });
     }
