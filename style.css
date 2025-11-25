@@ -8,6 +8,103 @@ body {
     overflow-x: hidden;
 }
 
+/* TOOLS SECTION — CLEAN VERSION */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+/* Logo placeholder or actual logo container */
+.tool-logo {
+    height: 120px;
+    background: #e3e1ff;     /* Light purple */
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Later, when you replace with real images */
+.tool-logo img {
+    max-width: 80px;
+    max-height: 80px;
+}
+
+/* MOBILE — 3 columns */
+@media (max-width: 768px) {
+    .tools-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+
+    .tool-logo {
+        height: 100px;
+    }
+}
+
+
+/* TOOLBOX TOOLTIP */
+.toolbox-tip {
+    position: relative;
+}
+
+.toolbox-tip:hover::after {
+    content: attr(data-tip);
+    position: absolute;
+    top: -10px;
+    left: 0;
+    transform: translateY(-100%);
+    background: rgba(0,0,0,0.85);
+    color: white;
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 6px;
+    white-space: nowrap;
+    z-index: 999;
+}
+
+
+/* Placeholder styling (optional) */
+.tool-placeholder {
+    width: 80px;
+    height: 80px;
+    background: #e3e1ff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* MOBILE: 3 columns (3 x 2) */
+@media (max-width: 768px) {
+    .tools-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+
+    .tools-grid img,
+    .tool-placeholder {
+        width: 60px;
+    }
+}
+
+
+.section {
+    max-width: 900px;
+    margin: 60px auto;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
 /* NAVIGATION */
 .navbar {
     display: flex;
@@ -18,17 +115,18 @@ body {
     border-bottom: 1px solid #ddd;
     position: sticky;
     top: 0;
-    z-index: 20;
+    z-index: 50;
 }
 
+/* DESKTOP NAV */
 .nav-links {
     display: flex;
-    gap: 18px;
+    gap: 20px;
 }
 
 .nav-links a {
-    color: #333;
     text-decoration: none;
+    color: #333;
 }
 
 .nav-cta {
@@ -40,10 +138,10 @@ body {
 }
 
 .desktop-only {
-    display: inline-block;
+    display: flex;
 }
 
-/* HAMBURGER — MOBILE ONLY */
+/* MOBILE HAMBURGER */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -58,22 +156,23 @@ body {
     border-radius: 2px;
 }
 
+/* MOBILE DROP-DOWN MENU */
 .mobile-menu {
     display: none;
     flex-direction: column;
     background: white;
+    padding: 15px 22px;
     border-bottom: 1px solid #ddd;
-    padding: 10px 20px;
-}
-
-.mobile-menu a {
-    padding: 10px 0;
-    text-decoration: none;
-    color: #333;
 }
 
 .mobile-menu.open {
     display: flex;
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    padding: 10px 0;
+    color: #333;
 }
 
 /* HERO */
@@ -84,12 +183,12 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    overflow: hidden;
 }
 
 #heroAnimation {
     position: absolute;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
 }
@@ -101,21 +200,102 @@ body {
 }
 
 .hero h1 {
-    font-size: 38px;
+    font-size: 40px;
+    margin-bottom: 15px;
 }
 
 .hero p {
-    font-size: 18px;
-    max-width: 600px;
-    margin: 20px auto;
+    font-size: 20px;
+    margin-bottom: 20px;
 }
 
-/* MOBILE FIXES */
+.cta {
+    background: #5f63ff;
+    color: white;
+    padding: 12px 26px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    min-width: 260px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+/* IMAGE GRID */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.image-placeholder {
+    height: 160px;
+    background: #dcd8ff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* CTA SECTION */
+.cta-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: #5f63ff;
+    color: white;
+}
+
+.cta-large {
+    background: white;
+    color: #5f63ff;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 40px;
+    background: #222;
+    color: #bbb;
+}
+
+/* --- MOBILE CARD FIX --- */
 @media (max-width: 768px) {
 
-    .nav-links {
-        display: none;
+    .cards {
+        gap: 16px;                 /* Reduce spacing between cards */
     }
+
+    .card {
+        padding: 18px 20px;        /* Reduce horizontal padding */
+        margin: 0;                 /* Remove any inherited side margins */
+        border-radius: 10px;       /* Slightly smaller radius for mobile */
+    }
+
+    #services .section {
+        padding-left: 20px;
+        padding-right: 20px;       /* Tighten section padding */
+    }
+}
+
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 768px) {
 
     .desktop-only {
         display: none;
@@ -127,25 +307,28 @@ body {
 
     .hero {
         height: 420px;
-        padding: 40px 10px;
     }
 
     .hero h1 {
         font-size: 28px;
-        line-height: 1.3;
+        line-height: 1.25;
     }
 
     .hero p {
         font-size: 16px;
-        opacity: 0.95;
     }
 
     .cta {
         padding: 10px 22px;
-        font-size: 16px;
+    }
+
+    .card {
+        min-width: 100%;
     }
 
     .image-placeholder {
         height: 140px;
     }
+	
+	
 }
