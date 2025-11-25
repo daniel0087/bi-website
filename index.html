@@ -13,8 +13,8 @@
     <nav class="navbar">
         <div class="nav-left">Daniel Martin | BI Consultant</div>
 
-        <!-- Desktop Links -->
-        <div class="nav-links" id="navLinks">
+        <!-- Desktop Nav -->
+        <div class="nav-links desktop-only">
             <a href="#services">Services</a>
             <a href="#tools">Tools</a>
             <a href="#problems">Problems I Solve</a>
@@ -22,10 +22,9 @@
             <a href="#about">About</a>
         </div>
 
-        <!-- CTA on Desktop -->
         <a href="#assessment" class="nav-cta desktop-only">Book a Free Assessment</a>
 
-        <!-- Hamburger -->
+        <!-- Mobile hamburger -->
         <div class="hamburger" id="hamburger">
             <span></span>
             <span></span>
@@ -33,7 +32,7 @@
         </div>
     </nav>
 
-    <!-- Mobile Dropdown Menu -->
+    <!-- MOBILE DROP-DOWN MENU -->
     <div class="mobile-menu" id="mobileMenu">
         <a href="#services">Services</a>
         <a href="#tools">Tools</a>
@@ -73,18 +72,22 @@
         </div>
     </section>
 
-    <!-- TOOLS -->
-    <section id="tools" class="section">
-        <h2>Tools I Use</h2>
-        <ul class="list center">
-            <li>NetSuite</li>
-            <li>BigQuery</li>
-            <li>Domo</li>
-            <li>Google Sheets</li>
-            <li>SQL</li>
-            <li>Looker Studio</li>
-        </ul>
-    </section>
+<!-- TOOLS SECTION -->
+<section id="tools" class="section">
+    <h2>Tools I Use</h2>
+
+    <div class="tools-grid">
+        <div class="tool-logo toolbox-tip" data-tip="300×300 px recommended"><span>Logo 1</span></div>
+        <div class="tool-logo toolbox-tip" data-tip="300×300 px recommended"><span>Logo 2</span></div>
+        <div class="tool-logo toolbox-tip" data-tip="300×300 px recommended"><span>Logo 3</span></div>
+        <div class="tool-logo toolbox-tip" data-tip="300×300 px recommended"><span>Logo 4</span></div>
+        <div class="tool-logo toolbox-tip" data-tip="300×300 px recommended"><span>Logo 5</span></div>
+        <div class="tool-logo toolbox-tip" data-tip="300×300 px recommended"><span>Logo 6</span></div>
+    </div>
+</section>
+
+
+
 
     <!-- PROBLEMS -->
     <section id="problems" class="section">
@@ -101,14 +104,39 @@
 
     <!-- PORTFOLIO -->
     <section id="portfolio" class="section">
-        <h2>Portfolio (Replace With Your Images)</h2>
+        <h2>Portfolio</h2>
         <div class="image-grid">
-            <div class="image-placeholder"><span>Image 1</span></div>
-            <div class="image-placeholder"><span>Image 2</span></div>
-            <div class="image-placeholder"><span>Image 3</span></div>
-            <div class="image-placeholder"><span>Image 4</span></div>
-            <div class="image-placeholder"><span>Image 5</span></div>
-            <div class="image-placeholder"><span>Image 6</span></div>
+
+            <div class="image-placeholder toolbox-tip"
+                 data-tip="Recommended: 800×500 px • Aspect ratio 16:10">
+                <span>Image 1</span>
+            </div>
+
+            <div class="image-placeholder toolbox-tip"
+                 data-tip="Recommended: 800×500 px • Aspect ratio 16:10">
+                <span>Image 2</span>
+            </div>
+
+            <div class="image-placeholder toolbox-tip"
+                 data-tip="Recommended: 800×500 px • Aspect ratio 16:10">
+                <span>Image 3</span>
+            </div>
+
+            <div class="image-placeholder toolbox-tip"
+                 data-tip="Recommended: 800×500 px • Aspect ratio 16:10">
+                <span>Image 4</span>
+            </div>
+
+            <div class="image-placeholder toolbox-tip"
+                 data-tip="Recommended: 800×500 px • Aspect ratio 16:10">
+                <span>Image 5</span>
+            </div>
+
+            <div class="image-placeholder toolbox-tip"
+                 data-tip="Recommended: 800×500 px • Aspect ratio 16:10">
+                <span>Image 6</span>
+            </div>
+
         </div>
     </section>
 
@@ -137,7 +165,6 @@
 
         hamburger.addEventListener('click', () => {
             mobileMenu.classList.toggle('open');
-            hamburger.classList.toggle('active');
         });
     </script>
 
