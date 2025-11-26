@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daniel Martin — BI Consultant</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ======================================
-         NAVIGATION
-    ======================================= -->
+    <!-- NAV -->
     <nav class="navbar">
         <div class="nav-left">Daniel Martin | BI Consultant</div>
 
@@ -24,33 +21,26 @@
             <a href="#about">About</a>
         </div>
 
-        <a href="https://danielshawnmartin.youcanbook.me/" class="nav-cta desktop-only" target="_blank">
+        <a class="nav-cta desktop-only" href="https://danielshawnmartin.youcanbook.me/" target="_blank">
             Book a Free Assessment
         </a>
 
-        <!-- Hamburger -->
         <div id="hamburger" class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
+    <!-- MOBILE MENU -->
     <div id="mobileMenu" class="mobile-menu">
         <a href="#services">Services</a>
         <a href="#tools">Tools</a>
         <a href="#problems">Problems I Solve</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#about">About</a>
-        <a href="https://danielshawnmartin.youcanbook.me/" class="nav-cta" target="_blank">
-            Book a Free Assessment
-        </a>
+        <a class="nav-cta" href="https://danielshawnmartin.youcanbook.me/" target="_blank">Book Assessment</a>
     </div>
 
-    <!-- ======================================
-         HERO
-    ======================================= -->
+    <!-- HERO -->
     <header class="hero">
         <div id="heroAnimation"></div>
 
@@ -58,15 +48,13 @@
             <h1>Automated Reporting & Dashboards for Operations Teams</h1>
             <p>I help retail, wholesale, and operations teams eliminate manual reporting through automation, clean pipelines, and NetSuite-powered dashboards.</p>
 
-            <a href="https://danielshawnmartin.youcanbook.me/" class="cta" target="_blank">
+            <a class="cta" href="https://danielshawnmartin.youcanbook.me/" target="_blank">
                 Book a Free Assessment
             </a>
         </div>
     </header>
 
-    <!-- ======================================
-         SERVICES
-    ======================================= -->
+    <!-- SERVICES -->
     <section id="services" class="section">
         <h2>Services</h2>
 
@@ -77,4 +65,117 @@
             </div>
 
             <div class="card">
-                <h3>
+                <h3>Data Pipelines</h3>
+                <p>Building clean, reliable data flows between NetSuite, Sheets, BigQuery, and Domo.</p>
+            </div>
+
+            <div class="card">
+                <h3>NetSuite Reporting</h3>
+                <p>Advanced NetSuite KPI dashboards, saved searches, and automated workflows.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOOLS -->
+    <section id="tools" class="section">
+        <h2>Tools I Use</h2>
+
+        <div class="tools-grid">
+            <div class="tool-logo"><img src="images/tools/tool01.png"></div>
+            <div class="tool-logo"><img src="images/tools/tool02.png"></div>
+            <div class="tool-logo"><img src="images/tools/tool03.png"></div>
+            <div class="tool-logo"><img src="images/tools/tool04.png"></div>
+            <div class="tool-logo"><img src="images/tools/tool05.png"></div>
+            <div class="tool-logo"><img src="images/tools/tool06.png"></div>
+        </div>
+    </section>
+
+    <!-- PROBLEMS -->
+    <section id="problems" class="section">
+        <h2>Common Problems I Solve</h2>
+
+        <ul>
+            <li>Teams spending hours exporting & merging CSVs.</li>
+            <li>BI dashboards that don’t match financials.</li>
+            <li>NetSuite reports that don’t answer leadership questions.</li>
+            <li>Inventory, ATP, and replenishment data in conflict.</li>
+            <li>No single source of truth for decision making.</li>
+            <li>Dashboards that require manual cleanup every week.</li>
+        </ul>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="section">
+        <h2>Portfolio</h2>
+
+        <div class="image-grid">
+            <div class="image-placeholder"><img src="images/portfolio/port01.png"></div>
+            <div class="image-placeholder"><img src="images/portfolio/port02.png"></div>
+            <div class="image-placeholder"><img src="images/portfolio/port03.png"></div>
+            <div class="image-placeholder"><img src="images/portfolio/port04.png"></div>
+            <div class="image-placeholder"><img src="images/portfolio/port05.png"></div>
+            <div class="image-placeholder"><img src="images/portfolio/port06.png"></div>
+            <div class="image-placeholder"><img src="images/portfolio/port07.png"></div>
+            <div class="image-placeholder"><img src="images/portfolio/port08.png"></div>
+            <div class="image-placeholder"><img src="images/portfolio/port09.png"></div>
+            <div class="image-placeholder"><img src="images/portfolio/port10.png"></div>
+            <div class="image-placeholder"><img src="images/portfolio/port11.png"></div>
+            <div class="image-placeholder"><img src="images/portfolio/port12.png"></div>
+            <div class="image-placeholder"><img src="images/portfolio/port13.png"></div>
+            <div class="image-placeholder"><img src="images/portfolio/port14.png"></div>
+            <div class="image-placeholder"><img src="images/portfolio/port15.png"></div>
+            <div class="image-placeholder"><img src="images/portfolio/port16.png"></div>
+            <div class="image-placeholder"><img src="images/portfolio/port17.png"></div>
+            <div class="image-placeholder"><img src="images/portfolio/port18.png"></div>
+        </div>
+    </section>
+
+    <!-- MODAL -->
+    <div id="img-modal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img id="modal-img" class="modal-content">
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>I’m Daniel Martin, a BI consultant specializing in automated data pipelines and NetSuite analytics for retail & operations teams.</p>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2>Ready to Automate Your Reporting?</h2>
+        <a class="cta-large" href="https://danielshawnmartin.youcanbook.me/" target="_blank">Book a Free Assessment</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        © 2025 Daniel Martin — BI Consultant
+    </footer>
+
+    <script src="animation.js"></script>
+
+    <script>
+        // Mobile menu
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        hamburger.onclick = () => mobileMenu.classList.toggle('open');
+
+        // Modal
+        const modal = document.getElementById('img-modal');
+        const modalImg = document.getElementById('modal-img');
+        const close = document.querySelector('.modal-close');
+
+        document.querySelectorAll('.image-placeholder img').forEach(img => {
+            img.onclick = () => {
+                modal.style.display = "block";
+                modalImg.src = img.src;
+            };
+        });
+
+        close.onclick = () => modal.style.display = "none";
+        window.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
+    </script>
+
+</body>
+</html>
