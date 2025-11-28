@@ -199,6 +199,42 @@ body {
     color: #bbb;
 }
 
+/* COPY CONTAINERS */
+.copy-container {
+    background: white;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    margin: 20px 0;
+    position: relative;
+}
+
+.copy-container pre {
+    white-space: pre-wrap;
+    margin-top: 40px;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #6f27ff;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s ease;
+}
+
+.copy-btn:hover {
+    background: #5a1fe0;
+}
+
+
 /* MOBILE */
 @media (max-width: 768px) {
     .desktop-only { display: none; }
